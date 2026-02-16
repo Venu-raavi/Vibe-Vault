@@ -31,7 +31,7 @@ Install Node.js from nodejs.org,
 Open the folder in VS Code,  
 Open terminal,  
 
-Run npm install   
-Run npm start → browser opens automatically
+Run- npm install   
+Run- npm start → browser opens automatically
 
 -on stopping the app (Ctrl+C) and restarting it later (just npm start, no reinstall needed).
