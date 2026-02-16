@@ -1,0 +1,97 @@
+.section {
+  background: var(--obsidian-2);
+  border: 1px solid var(--obsidian-4);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formGroup { margin-bottom: 1.1rem; }
+
+.label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory-dim);
+  margin-bottom: 0.4rem;
+}
+
+.input {
+  width: 100%;
+  background: var(--obsidian-3);
+  border: 1px solid var(--obsidian-4);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  color: var(--ivory);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input:focus       { border-color: var(--gold-dim); }
+.input.inputError  { border-color: var(--red); }
+.input::placeholder { color: var(--slate); }
+
+.errorMsg {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--red);
+  margin-top: 0.3rem;
+}
+
+.testNote {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+}
+
+/* Order Summary */
+.summaryLine {
+  display: flex; justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ivory-dim);
+  padding: 0.35rem 0;
+}
+.summaryMuted { color: var(--slate); }
+
+.totalLine {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--obsidian-4);
+}
+.totalLabel  { font-family: var(--font-display); font-size: 1rem; color: var(--ivory); }
+.totalAmount { font-family: var(--font-mono); font-size: 1.3rem; color: var(--gold); font-weight: 500; }
+
+@media (max-width: 560px) {
+  .row { grid-template-columns: 1fr; }
+}
+
+.upiNote {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--slate);
+  margin-top: 0.75rem;
+  letter-spacing: 0.04em;
+}

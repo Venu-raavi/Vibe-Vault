@@ -1,0 +1,169 @@
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  animation: fadeIn 0.2s ease;
+}
+
+.drawer {
+  position: fixed; right: 0; top: 0; bottom: 0;
+  width: min(420px, 95vw);
+  background: var(--obsidian-2);
+  border-left: 1px solid var(--obsidian-4);
+  z-index: 201;
+  display: flex; flex-direction: column;
+  animation: slideFromRight 0.35s var(--ease-expo);
+}
+
+.drawerHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--obsidian-4);
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.drawerTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--ivory);
+}
+
+.closeBtn {
+  background: none; border: none;
+  color: var(--slate);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.25rem;
+}
+.closeBtn:hover { color: var(--ivory); }
+
+.itemList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+}
+
+.empty {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  height: 100%; gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--slate);
+  letter-spacing: 0.08em;
+}
+.emptyIcon { font-size: 2.5rem; opacity: 0.35; }
+
+/* Cart Item */
+.cartItem {
+  display: flex; gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--obsidian-3);
+  animation: fadeUp 0.3s var(--ease-expo);
+}
+
+.cartItemEmoji {
+  width: 56px; height: 56px;
+  background: var(--obsidian-3);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.cartItemDetails { flex: 1; min-width: 0; }
+
+.cartItemName {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  color: var(--ivory);
+  margin-bottom: 0.2rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.cartItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.cartItemControls {
+  display: flex; align-items: center; gap: 0.5rem;
+}
+
+.qtyBtn {
+  background: var(--obsidian-4);
+  border: 1px solid var(--obsidian-4);
+  border-radius: var(--radius-sm);
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ivory-dim);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.qtyBtn:hover { background: var(--obsidian-3); color: var(--ivory); }
+
+.qtyDisplay {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ivory);
+  min-width: 20px; text-align: center;
+}
+
+.removeBtn {
+  background: none; border: none;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  margin-left: auto;
+  transition: color 0.2s;
+}
+.removeBtn:hover { color: var(--red); }
+
+/* Footer */
+.footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--obsidian-4);
+}
+
+.lineItem {
+  display: flex; justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--slate);
+  margin-bottom: 0.45rem;
+}
+.lineItem:last-of-type {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--obsidian-3);
+  margin-bottom: 0.75rem;
+}
+
+.totalRow {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+.totalLabel  { font-family: var(--font-display); font-size: 1rem; color: var(--ivory); }
+.totalAmount { font-family: var(--font-mono); font-size: 1.4rem; color: var(--gold); font-weight: 500; }
+
+.checkoutBtn {
+  width: 100%;
+  background: var(--gold);
+  color: var(--obsidian);
+  border: none; border-radius: var(--radius-sm);
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s var(--ease-back);
+}
+.checkoutBtn:hover { background: var(--gold-light); transform: translateY(-1px); }
+.checkoutBtn:active { transform: translateY(0); }
